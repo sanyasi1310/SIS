@@ -1,0 +1,210 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Electronics department</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+          <link rel="stylesheet" type="text/css"
+        href="{% static 'MTU/hstyle.css' %}">
+        <style type="text/css"> 
+            body{
+                background-image:  url('static/Images/electronicsbg.jpg');
+                background-repeat:no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                font-family:'Roboto',sans-serif;
+                color: #3e3e3e;
+                padding: 50px 0;
+            }
+            h1{
+                color: white;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h2{
+                color: black;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+             h3{
+                color: white;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h4{
+                color: #3696dc;
+                text-transform: none;
+                text-align:left;
+                letter-spacing: 2px;
+            }
+            h5{
+                color: black;
+                text-transform: none;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+             h6{
+                color: white;
+                text-transform: none;
+                text-align:left;
+                letter-spacing: 2px;
+            }
+            p{
+                font-size:16px;
+                line-height: 24px;
+            }
+            .container{
+                max-width:1270px;
+                width:100%;
+                margin: 0 auto;
+                display: flex;
+            }
+            .column{
+                margin: 0 15px 25px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0,0, 0.24);
+                background: #fff;
+                border-radius: 10px;
+                flex-basis: 33%;
+            }
+            .card{
+                padding:15px 25px;
+            }
+            img{
+                max-width:100%;
+            }
+             .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 55px 1375px;
+                cursor: pointer;
+            }
+            .button1 {padding: 10px 24px;}
+            a:hover {
+                background-color: darkgrey;
+            }
+            
+        </style>
+    </head>
+    <body>
+     
+    <h1><b>Electrical & Computer Engineering</b></h1>
+    <br>
+    <center>
+        <img style='border:5px solid black' src="{% static 'Images/electronics.jpg' %}" height="400px" width="650px">
+        <div class="w3-container">
+            <div class="w3-light-grey w3-section" style="width:57.5%">
+              <button onclick="myFunction('Demo3')" class="w3-button w3-block"> Meet Riley Bloomfield, MESc candidate in Electrical & Computer Engineering</button>
+        <div id="Demo3" class="w3-hide w3-container">
+            <p style="font-style: italic">"I am from a software engineering background, but I am constantly learning new things outside of my field and this keeps my work interesting for me."
+            <h4>Why did you come to MTU for your graduate degree?</h4>
+            <p>During my second year of undergraduate studies, I was the recipient of an NSERC Undergraduate Student Research Award. This award permitted me to complete a research assistant placement over the summer, gave me research experience, and provided an opportunity to work in a new area. My experience convinced me to pursue graduate studies and led to the discovery of my current graduate project.</p>
+            <h4>Where’s your favourite place on campus?</h4>
+            <p>Most of my time on campus is spent in a lab at Robarts Research Institute near University Hospital. This is a convenient spot for me as it is close to other students and researchers in the field.
+</p>
+            <h4>What is it about your grad program that enables you to thrive and be successful?</h4>
+            <p>The interdisciplinary nature of the program. I have had the opportunity to do my research alongside faculty and students from the departments of medical biophysics, biomedical engineering, and kinesiology as well as scientists at Robarts Research Institute and Lawson Health Institute.</p>
+            <h4>What’s the best advice you could give to someone considering applying to your graduate program?
+</h4>
+            <p>The best advice I have is to work with your supervisors and any help available. Sometimes I find that I work for a long time on a small and very specific issue with my research, and the solution is often found after a discussion with a supervisor or colleague who may have had a similar problem in the past. Even if a solution is not available, it is good to hear different opinions or approaches to problems.</p>
+        </div>
+            </div>              
+        </div>
+        <script>
+            function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            } else { 
+            x.className = x.className.replace(" w3-show", "");
+            }
+            }
+        </script>
+    </center>
+    <div id="bodyI">
+            <h6><b>The Department of Electrical and Computer Engineering offers graduate programs at the masters (M.E.Sc. and M.Eng.) and doctoral (Ph.D.) level in the following research areas: biomedical systems, communications systems and data networking, applied electrostatics and electromagnetics, microsystems and digital signal processing, power systems engineering, robotics and control and software engineering.</b></h6>
+    </div>
+    <div class="container">
+        <div class="column">
+<!--            column 1-->
+           <div class="card">
+                <h2>Program Information</h2>
+                <h4><b>Program Length</b></h4>
+                <h5>6 Terms (2 year)</h5>
+                <h4><b>Program Design</b></h4>
+                <ul>
+                    <li>Full-time study</li>
+                    <li>Thesis-based</li>
+                </ul>
+                <h4><b>Application Deadline</b></h4> 
+                <h5><b>For Domestic Students</b></h5>
+                <ul>
+                    <li>Fall Semester : 30th June</li>
+                    <li>Winter Semester : 30th November </li>
+                    <li>Summer Semester : 30th March </li>
+                </ul>     
+                <h5><b>For International Students</b></h5>
+                <ul>
+                    <li>Fall Semester : 15 May</li>
+                    <li>Winter Semester : 15th October </li>
+                   <li>Summer Semester : 15th February </li>
+                </ul>     
+          </div>            
+        </div>
+        <div class="column">
+           <div class="card">
+<!--               column 2-->
+                <h2>Requirements</h2>
+                <h4><b>Program Requirements</b></h4> 
+                <ul>
+                    <li>Minimum 78% average in a four-year honours degree or equivalent from an accredited university (average based on last two years of the degree).</li>
+                    
+                </ul> 
+               <h4><b>Additional Requirements</b></h4> 
+                <ul>
+                    <li>Work experience is not mandatory, but applicants with work experience are given special consideration.</li> 
+                </ul> 
+                    <h4><b>English Language Proficiency</b></h4>
+                    <h5><b>Applicants whose first language is not English must furnish the evidence of their proficiency in the use of the english language</b></h5>
+                    
+                <ul>
+                    <li>The Test of English as a Foreign Language (TOEFL). The minimum acceptable score is 86, with no individual score below 20 for the internet based version; 213 for the standard electronic version; or 550 for the paper and pencil version, although some programs require a higher minimum score. </li>
+                    <li>The International English Language Testing Service (IELTS) of the British Council. The minimum acceptable score is 6.5 out of 9, with no minimum score below 6.0. The IELTS is offered in 6 test centres in the US and 3 in Canada.</li>
+                    
+                </ul> 
+            </div>            
+        </div>
+        <div class="column">
+           <div class="card">
+<!--               column 3-->
+                <h2>Inquiries</h2>
+                <h4><b>Application Inquiries</b></h4>
+                <p>Inquiries related to the online application can be directed to SGPS at:</p>
+                <p><b>Email : gradapps@mtu.ca</b></p>
+                <p><b>Phone : 438-850-2341</b></p>
+                <p>Fax : 438-661-3730</p>
+                <h4><b>Program Contact</b></h4>
+                <h5><b>Melad Marbeen</b></h5>
+               <center>
+                    <img src="{% static 'Images/electronicscontact.PNG' %}" height="150px" width="165px"> 
+               </center>
+                <p>(ecegrad@mtu.ca)</p>
+               <p>Graduate Program Coordinator</p>
+               <p>Electrical & Computer Engineering</p>
+               <p>Montreal Technical University</p>
+               <p><b>438-661-2111 ext. 83567</b></p>
+               <p>Fax : 438-661-3510</p>
+            </div>            
+        </div>
+    </div>
+    </body>
+</html>

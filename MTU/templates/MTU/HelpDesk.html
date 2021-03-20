@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MTU-Help desk</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css"
+        href="{% static 'MTU/hstyle.css' %}">
+
+        
+         <style>
+        textarea{
+          width: 425px ;
+          height: 102px;
+        }
+         label{
+          width: 240px ;
+          display: inline-block;
+        }
+   body{
+            background-image: url({% static 'Images/pf.PNG' %});
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }    
+        .button {
+                background-color: white; 
+                border: none;
+                color: black;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                border-radius: 30px;
+                font-size: 16px;
+                margin: -60px 1375px;
+                cursor: pointer;
+            }      
+             .button1 {padding: 10px 24px;}      
+        </style>
+    </head>
+    <body>
+        <div id="body1">
+            <img src="{% static 'Images/logo2.jpg' %}" id="logo">
+            <br>
+            <h1 style="color: white ; font-size:60px" align="center">Help Desk</h1>
+<!-------------------------Home button----------------------------->            
+           <a href="{% url 'masterpage' %}" class="button button1">Home</a>    
+        </div>
+ <div class="container" style="margin:0">
+            <div class="row">
+            <div class="col-sm-3">
+                <h3>MTU Space</h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li ><a href="{% url 'student_info' %}">Student Information</a></li>
+                    <li><a href="{% url 'Enrollment' %}">Enrollment</a></li>
+                    <li><a href="{% url 'displaycourse' %}">Course</a></li>
+                    <li><a href="{% url 'finance' %}">Finance</a></li>
+                    <li><a href="{% url 'event' %}">Events</a></li>
+                    <li class="active" ><a href="{% url 'HelpDesk' %}">Help Desk</a></li>
+                    <li><a href="{% url 'alumni' %}">Alumni</a></li>
+                    
+               </ul>
+                 <hr class="hidden-sm hidden-md hidden-lg">
+            </div>
+            <div class="col-sm-8">
+           
+                <!--write anything from here-->
+<!------Help desk page.---------->
+               <div class="helpdesk">
+                <div  style="margin-top:10px;"><img src="https://img.icons8.com/nolan/64/why-us-male.png"" id="iconhelpdesk"/></div>
+                <h1 style="color: #042B52; font-size:40px; margin-left: 80px; margin-top: -55px;" >Complaints and Help Desk</h1>
+               <p style="font-size:20px; align-text: justify; width: 1175px;margin-top: 20px;margin-left: 20px;">MTU is committed to respecting all members of our community and
+                providing a quality educational experience for all students. To that end,
+                 MTU has established this complaint policy and
+                  procedure to provide students with a process for addressing complaints
+                   or grievances regarding any aspect of their educational experience.
+                    Students are encouraged to resolve complaints or grievances at the
+                     appropriate level of dispute. However, should this approach fail or
+                      be inappropriate, students may submit a formal complaint describing the 
+                      treatment, action or decision
+                       at issue and the remedy sought.</p>
+<!-- form -->
+                <div class="col-sm-8">
+                <form method="post" action="/HelpDesk/" class="form">
+                {% csrf_token %}
+              
+                <label for="problemCategory">Problem Category</label>
+                <input  type="text" id="problemCategory" name="problemCategory"><br>
+              
+                <label for="studentName" ></label>               
+                <input name="studentName" id="studentName" value="{{ request.user}}" type="hidden">
+                <label for="subCategory">Sub Category</label>
+                <input name="subCategory" id="subCategory"><br><br>
+                <label for="email">Email</label>
+                <input name="email" id="email" ><br>
+                <label for="explanation">Explanation</label></t>
+                <textarea style="color:#042B52; font-size: 20px; border-radius:5px;" name="explanation" id="explanation" type="text" rows="6" cols="20"></textarea><br>
+                <br>
+                <label for="department">Department</label>
+                <input name="department" id="department">
+                <input  type="Submit" value="Submit" ><br>
+                </form>
+                
+                <p>{{ success }}</p>
+               
+               </div>
+               
+               
+                </div>
+                
+               
+            </div>
+     </div>
+</div>        
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+  
+  <script> 
+      window.addEventListener("load", function(){
+          $('#modal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('whatever') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    modal.find('.modal-title').text('New message to ' + recipient)
+    modal.find('.modal-body input').val(recipient)
+  });
+  
+     
+  })
+      
+      </script>
+          
+     
+    </body>
+</html>

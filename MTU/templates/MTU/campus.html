@@ -1,0 +1,338 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>campuslife</title>
+  <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'MTU/hstyle.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .box{
+            width: 500px;
+            height: 200px;
+            padding: 20px;
+            margin: 100px auto;
+            box-shadow: 0px 0px 10px 2px grey;
+            border: 10px solid red;
+            background-image: url('static/Images/p6.jpg')
+            background-size: cover;
+        }
+        .container1{
+                max-width:1270px;
+                width:100%;
+                margin: 0 auto;
+                display: flex;
+            }
+        h1{
+                color: white;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+        body{
+                background-image:  url('static/Images/p20.jpg');
+                background-repeat:no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                font-family:'Roboto',sans-serif;
+                color: #3e3e3e;
+                padding: 50px 0;
+            }
+        
+        .column{
+                margin: 0 15px 25px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0,0, 0.24);
+                background: #fff;
+                border-radius: 10px;
+                flex-basis: 33%;
+            }
+            .card{
+                padding:15px 25px;
+            }
+            img{
+                max-width:100%;
+            }
+    </style>
+</head>
+<body>
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="{% static 'Images/logo2.jpg' %}" height="60" width="65">
+                <a class="navbar-brand" href="{% url 'Home' %}">MTU</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admission <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{% url 'undergraduate' %}">Undergraduate</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'graduate' %}">Graduate</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'professional' %}">Professional Education</a>
+                            </li>
+                            
+                        </ul>
+                    </li> 
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Departments <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{% url 'mechanical' %}">Mechanical Engineering</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'computer' %}">Computer Engineering</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'electronics' %}">Electrical & Computer Engineering</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'chemical' %}">Chemical Engineering</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'civil' %}">Civil Engineering</a>
+                            </li>   
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{% url 'login' %}">Login</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'register' %}">Register</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'faq' %}">FAQ</a>
+                            </li>                           
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{% url 'campus' %}">Campus Life</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'Contact' %}">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container">
+  <h1>MTU Welcomes you!</h1>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-------------------------------------- Indicators ---------------------------->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6"></li>
+        <li data-target="#myCarousel" data-slide-to="7"></li>
+        <li data-target="#myCarousel" data-slide-to="8"></li>
+        <li data-target="#myCarousel" data-slide-to="9"></li>
+        <li data-target="#myCarousel" data-slide-to="10"></li>
+        <li data-target="#myCarousel" data-slide-to="11"></li>
+        <li data-target="#myCarousel" data-slide-to="12"></li>
+        <li data-target="#myCarousel" data-slide-to="13"></li>
+        <li data-target="#myCarousel" data-slide-to="14"></li>
+        <li data-target="#myCarousel" data-slide-to="15"></li>
+        <li data-target="#myCarousel" data-slide-to="16"></li>
+    </ol>
+
+    <!------------------------ Wrapper for slides ------------------------------->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <center>
+          <img src="{% static 'Images/1.jpeg' %}"  style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>Sunny Summer</h3>
+          
+        </div>
+      </div>
+
+      <div class="item">
+        <center>
+          <img src="{% static 'Images/2.jpg' %}" style="width:80%;">
+        </center>
+            <div class="carousel-caption">
+          <h3>Beauty of Mount-Royal around you!!!</h3>
+        </div>
+      </div>
+    
+      <div class="item">
+        <center>
+          <img src="{% static 'Images/3.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>The World belongs to those who read</h3>
+        </div>
+      </div>
+        
+         <div class="item">
+        <center>
+          <img src="{% static 'Images/4.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>Start your JOURNEY from here</h3>
+        </div>
+      </div>
+        
+         <div class="item">
+        <center>
+          <img src="{% static 'Images/5.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>Conference Center</h3>
+        </div>
+      </div>
+        
+        <div class="item">
+        <center>
+          <img src="{% static 'Images/6.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>Library</h3>
+        </div>
+      </div>
+        
+        <div class="item">
+        <center>
+          <img src="{% static 'Images/7.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>Reading Room</h3>
+        </div>
+      </div>
+        
+        <div class="item">
+        <center>
+          <img src="{% static 'Images/8.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>Libraryr</h3>
+        </div>
+      </div>
+        
+        <div class="item">
+        <center>
+          <img src="{% static 'Images/9.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>Sporting Montreal FC</h3>
+        </div>
+      </div>
+        
+        <div class="item">
+        <center>
+          <img src="{% static 'Images/10.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>MTU</h3>
+        </div>
+      </div>
+        
+        
+        
+        <div class="item">
+        <center>
+          <img src="{% static 'Images/15.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>MTU Student Hostel</h3>
+        </div>
+      </div>
+        
+         <div class="item">
+        <center>
+          <img src="{% static 'Images/16.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>MTU Student Hostel</h3>
+        </div>
+      </div>
+        
+        <div class="item">
+        <center>
+          <img src="{% static 'Images/13.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>Library</h3>
+        </div>
+      </div>
+        
+        <div class="item">
+        <center>
+          <img src="{% static 'Images/14.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>MTU - Main Campus </h3>
+        </div>
+      </div>
+        
+       
+        
+        <div class="item">
+        <center>
+          <img src="{% static 'Images/17.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>MTU Gym</h3>
+        </div>
+      </div>
+        
+        <div class="item">
+        <center>
+          <img src="{% static 'Images/19.jpg' %}" alt="New York" style="width:80%;">
+        </center>
+        <div class="carousel-caption">
+          <h3>Have a Great Future Ahead</h3>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

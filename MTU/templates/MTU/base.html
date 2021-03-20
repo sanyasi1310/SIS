@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MTU</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css"
+        href="{% static 'MTU/hstyle1.css' %}">
+    </head>
+    <body>
+        <div id="body1">
+            <img src="{% static 'Images/logo2.jpg' %}" id="logo">
+            <h1 style="color: white ; font-size:60px" align="center">Events</h1>
+<!-------------------------Home button----------------------------->            
+            <a href="home.html">
+                <button class="btn">HOME</button>
+            </a>    
+        </div>
+ <div class="container" style="margin:0">
+            <div class="row">
+            <div class="col-sm-3">
+                <h3>MTU Space</h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">Student Information</a></li>
+                    <li><a href="#">Enrollment</a></li>
+                    <li><a href="#">Grades</a></li>
+                    <li><a href="#">Finance</a></li>
+                    <li><a href="#">Help Desk</a></li>
+                </ul>
+                 <hr class="hidden-sm hidden-md hidden-lg">
+            </div>
+            
+            <div class="col-sm-8">
+                <!--write anything from here-->
+                
+                <h1>{{ firstName }}</h1>
+                <h2> {{ lastName }}</h2>
+                <p> {{ address }}</p>
+                <p> {{ email }}</p>
+                
+                
+            </div>
+     </div>
+</div>        
+        
+        
+    </body>
+</html>

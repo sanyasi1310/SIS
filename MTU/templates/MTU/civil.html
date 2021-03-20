@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Civil department</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--        required css files-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+          <link rel="stylesheet" type="text/css" href="{% static 'MTU/hstyle.css' %}">
+        <style type="text/css"> 
+               body{
+                background-image:  url('static/Images/civilbg.jpg');
+                background-repeat:no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                font-family:'Roboto',sans-serif;
+                color: #3e3e3e;
+                padding: 50px 0;
+            }
+            h1{
+                color: white;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h2{
+                color: black;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+             h3{
+                color: white;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h4{
+                color: #3696dc;
+                text-transform: none;
+                text-align:left;
+                letter-spacing: 2px;
+            }
+            h5{
+                color: black;
+                text-transform: none;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+             h6{
+                color: white;
+                text-transform: none;
+                text-align:left;
+                letter-spacing: 2px;
+            }
+            p{
+                font-size:16px;
+                line-height: 24px;
+            }
+            .container{
+                max-width:1270px;
+                width:100%;
+                margin: 0 auto;
+                display: flex;
+            }
+            .column{
+                margin: 0 15px 25px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0,0, 0.24);
+                background: #fff;
+                border-radius: 10px;
+                flex-basis: 33%;
+            }
+            .card{
+                padding:15px 25px;
+            }
+            img{
+                max-width:100%;
+            }
+             .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 55px 1375px;
+                cursor: pointer;
+            }
+            .button1 {padding: 10px 24px;}
+            a:hover {
+                background-color: darkgrey;
+            }          
+        </style>
+    </head>
+    <body>    
+    <h1>Civil Engineering</h1>
+    <br>
+    <center>
+        <img style='border:3px solid #000000' src="{% static 'Images/civil.jpg' %}" height="400px" width="650px">
+        <div class="w3-container">
+            <div class="w3-light-grey w3-section" style="width:57.5%">
+                <button onclick="myFunction('Demo3')" class="w3-button w3-block"> Meet Kristine Lemieux, MPed Candidate Professional Education</button>
+        <div id="Demo3" class="w3-hide w3-container">
+            <p style="font-style: italic">"I have found MTU to be very accommodating of our out of school lives while trying to make our learning authentic and valuable.”</p>
+        </div>
+            </div>              
+        </div>
+        <script>
+            function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            } else { 
+            x.className = x.className.replace(" w3-show", "");
+            }
+            }
+        </script>
+    </center>
+    <div id="bodyI">
+            <h6><b>A Master of Engineering (MEng) degree is a professional coursework based degree offered at Montreal Technical University and is offered to students who have a bachelor's engineering degree or an equivalent degree from an accredited university. The MEng program offers a course-based degree that may be a combination of course work and a project OR complete course work.</b></h6>        
+    </div>
+    <div class="container">
+        <div class="column">
+<!--            column 1-->
+           <div class="card">
+                <h2>Program Information</h2>
+                <h4><b>Program Length</b></h4>
+                <h5>3 Terms (1 year)</h5>
+                <h4><b>Program Design</b></h4>
+                <ul>
+                    <li>Full-time study</li>
+                    <li>Part-time study</li>
+                    <li>Course-based</li>
+                    <li>Project-based</li>
+                </ul>
+                <h4><b>Application Deadline</b></h4> 
+                <h5><b>For Domestic Students</b></h5>
+                <ul>
+                    <li>Fall Semester : 30th June</li>
+                    <li>Winter Semester : 30th November </li>
+                    <li>Summer Semester : 30th March </li>
+                </ul>     
+                <h5><b>For International Students</b></h5>
+                <ul>
+                    <li>Fall Semester : 15 May</li>
+                    <li>Winter Semester : 15th October </li>
+                   <li>Summer Semester : 15th February </li>
+                </ul>     
+          </div>            
+        </div>
+        <div class="column">
+           <div class="card">
+<!--               column 2-->
+                <h2>Requirements</h2>
+                <h4><b>Program Requirements</b></h4> 
+                <ul>
+                    <li>Admission average is the North American B- (70%)</li>
+                    <li>Applicant should have a Bachelors degree in Engineering, or similar program.</li>
+                </ul> 
+                    <h4><b>English Language Proficiency</b></h4>
+                    <h5><b>Applicants whose first language is not English must furnish the evidence of their proficiency in the use of the english language</b></h5>
+                    
+                <ul>
+                    <li>The Test of English as a Foreign Language (TOEFL). The minimum acceptable score is 86, with no individual score below 20 for the internet based version; 213 for the standard electronic version; or 550 for the paper and pencil version, although some programs require a higher minimum score. </li>
+                    <li>The International English Language Testing Service (IELTS) of the British Council. The minimum acceptable score is 6.5 out of 9, with no minimum score below 6.0. The IELTS is offered in 6 test centres in the US and 3 in Canada.</li>
+                    <li>The Michigan English Language Assessment Battery (MELAB) of the University of Michigan. Students must have at least 80 on each of the sections and an overall score of at least 85. Arrangements to write MELAB may be made online.</li>
+                </ul> 
+            </div>            
+        </div>
+        <div class="column">
+           <div class="card">
+<!--               column 3-->
+                <h2>Inquiries</h2>
+                <h4><b>Application Inquiries</b></h4>
+                <p>Inquiries related to the online application can be directed to SGPS at:</p>
+                <p><b>Email : gradapps@mtu.ca</b></p>
+                <p><b>Phone : 438-850-2341</b></p>
+                <p>Fax : 438-661-3730</p>
+                <h4><b>Program Contact</b></h4>
+                <h5><b>Kristen Edwards</b></h5>
+               <center>
+                    <img src="{% static 'Images/civilcontact.PNG' %}" height="150px" width="155px"> 
+               </center>
+                <p>(civilgrad@mtu.ca)</p>
+               <p>Graduate Affairs Coordinator</p>
+               <p>Civil and Environment Engineering</p>
+               <p>Montreal Technical University</p>
+               <p><b>438-661-2111 ext. 83565</b></p>
+               <p>Fax : 438-661-3510</p>
+            </div>            
+        </div>
+    </div>
+    </body>

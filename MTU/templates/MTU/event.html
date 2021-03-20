@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MTU-Events</title>
+        <meta charset="utf-8">   
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'MTU/hstyle.css' %}">
+        <style>
+/*   for background properties  */
+            body{
+                background-image: url('static/Images/pf.PNG');
+                background-repeat:no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            
+
+            .button {
+                background-color: white; 
+                border: none;
+                color: black;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                border-radius: 30px;
+                font-size: 16px;
+                margin: -60px 1375px;
+                cursor: pointer;
+            }      
+    
+            .button1 {padding: 10px 24px;}
+            a:hover {
+                background-color: darkgrey;
+            }
+            .button2 {
+                background-color: #FBE43B; 
+                border: none;
+                color: black;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                border-radius: 30px;
+                font-size: 16px;
+                
+                cursor: pointer;
+            }
+        </style>
+    </head>
+        <body>
+            <div id="body1">
+                <img src="{% static 'Images/logo2.jpg' %}" id="logo">
+                <br>
+                <h1 style="color: white ; font-size:60px" align="center">Events</h1>
+    <!-------------------------Home button----------------------------->            
+               <a href="{% url 'masterpage' %}" class="button button1">Home</a>    
+            </div>
+    <div class="container" style="margin:0">
+            <div class="row">
+            <div class="col-sm-3">
+                <h3>MTU Space</h3>
+<!-- /*               Student services        */ -->
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="{% url 'student_info' %}">Student Information</a></li>
+                    <li><a href="{% url 'Enrollment' %}">Enrollment</a></li>
+                    <li><a href="{% url 'displaycourse' %}">Course</a></li>  
+                    <li><a href="{% url 'finance' %}">Finance</a></li>
+                    <li class="active"><a href="{% url 'event' %}">Events</a></li>
+                    <li><a href="{% url 'HelpDesk' %}">Help Desk</a></li> 
+                    <li><a href="{% url 'alumni' %}">Alumni</a></li>
+                </ul>
+                <hr class="hidden-sm hidden-md hidden-lg">
+            </div>
+            <div class="col-sm-8">               
+                <div class="event-container">                   
+    <h3 class="year">2020</h3>                    
+            <!-- /*        Event 1 */  -->
+    <div class="event">
+        <div class="event-left">
+            <div class="event-date">
+                <div class="date">11</div>
+                    <div class="month">Nov</div>
+            </div>
+        </div>
+        <div class="event-right">
+            <h3 class="event-title">Welcome Crew Wednesdays</h3>
+            <center><img src="{% static 'Images/welcome.PNG' %}" height="200px" width="450px"></center>
+            <br>
+            <div class="event-discription">ve
+                Welcome Crew Wednesdays are bi-weekly group chats for students in their first term at MTU, led by our Welcome Crew Mentors. 
+                <p>These casual conversations will allow students to meet and connect with each other.</p>
+            <center> 
+                <h4>Cost : Free</h4>
+                 <div class="event-timing">
+                    <img src="{% static 'Images/clock.PNG' %}" alt="" /> 10:00 am </div>
+                    <div class="event-register">
+                        <a href="{% url 'event_welcome' %}" class="button2">Register</a></div>
+            </center>
+            </div> 
+        </div>      
+    </div>
+                    
+  <!-- /*    Event 2 */                   -->
+    <div class="event">
+        <div class="event-left">
+            <div class="event-date">
+                <div class="date">25</div>
+                    <div class="month">Nov</div>
+            </div>
+        </div>
+        <div class="event-right">
+            <h3 class="event-title">KPMG Recruitment Event</h3>
+            <center><img src="{% static 'Images/kpmg.PNG' %}" height="200px" width="450px"></center>
+            <div class="event-discription">
+                The KPMG Advisory Services team will hold an info session at MTU to share our summer internship program for 2020. 
+                <p> Please note that the dress code is business professional (Jeans are not allowed)</p>
+            <center> 
+                <p><b>Target Audience: All years of study</b></p>
+                <h4>Cost : Free</h4>
+                 <div class="event-timing">
+                    <img src="{% static 'Images/clock.PNG' %}" alt="" /> 11:30 am </div>
+                 <div class="event-register">
+                    <a href="{% url 'event_kpmg' %}" class="button2">Register</a></div>
+            </center>
+            </div> 
+        </div>      
+    </div>
+                    
+  <!-- /*    Event 3 */                -->
+    <div class="event">
+        <div class="event-left">
+            <div class="event-date">
+                <div class="date">13</div>
+                    <div class="month">Dec</div>
+            </div>
+        </div>
+        <div class="event-right">
+            <h3 class="event-title">Bell Virtual Information Session</h3>
+            <center>
+                <img src="{% static 'Images/bell.PNG' %}" height="225px" width="450px"></center>
+            <br>
+            <div class="event-discription">
+                With Canada's largest and most diverse communications company, we are sure you will find lots to be excited about.
+ 
+                <p>Our interns & new graduates are making big things happen at Bell.</p>
+            <center> 
+                <h4>Cost : Free</h4>
+                 <div class="event-timing">
+                    <img src="{% static 'Images/clock.PNG' %}" alt="" /> 9:00 am </div>
+                    <div class="event-register">
+                        <a href="{% url 'event_bell' %}" class="button2">Register</a></div>
+            </center>
+            </div> 
+        </div>      
+       </div>               
+    </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

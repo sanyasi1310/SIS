@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/modern-business.css' %}" rel="stylesheet">
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'MTU/hstyle.css' %}">
+    <style>
+        .box{
+                width: 500px;
+                height: 200px;
+                padding: 20px;
+                margin: 100px auto;
+                box-shadow: 0px 0px 10px 2px grey;
+                border: 10px solid red;
+                background-image: url('static/Images/p6.jpg')
+                background-size:cover;
+/*            background        */
+        .body{
+                background-image: url('static/Images/pf.PNG');
+                background-repeat:no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                font-family:'Roboto',sans-serif;
+                color: #3e3e3e;
+                padding: 50px 0;
+            }
+        .container1{
+                max-width:1270px;
+                width:100%;
+                margin: 0 auto;
+                display: flex;
+            }
+            .column{
+                margin: 0 15px 25px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0,0, 0.24);
+                background: #fff;
+                border-radius: 10px;
+                flex-basis: 33%;
+            }
+            .card{
+                padding:15px 25px;
+            }
+            img{
+                max-width:100%;
+            }
+        </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="{% static 'Images/logo2.jpg' %}" height="60" width="65">
+                <a class="navbar-brand" href="{% url 'Home' %}">MTU</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admission <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{% url 'undergraduate' %}">Undergraduate</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'graduate' %}">Graduate</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'professional' %}">Professional Education</a>
+                            </li>
+                            
+                        </ul>
+                    </li> 
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Departments <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{% url 'mechanical' %}">Mechanical Engineering</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'computer' %}">Computer Engineering</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'electronics' %}">Electrical & Computer Engineering</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'chemical' %}">Chemical Engineering</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'civil' %}">Civil Engineering</a>
+                            </li>   
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{% url 'login' %}">Login</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'register' %}">Register</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'faq' %}">FAQ</a>
+                            </li>                           
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{% url 'campus' %}">Campus Life</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'Contact' %}">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="about">                             
+                <br>
+                <br>
+                <br>
+                <img src="{% static 'Images/whyMTU.jpg' %}" id="aboutimage" style="float:left" />
+                <h1 class="admission-title">Why choose MTU?</h1>                
+                <p>The Montreal Technical University gives you an edge. Here, you’ll find an extraordinary
+                 academic environment, hands-on learning opportunities, and a drive to make an impact on
+                 the world around us. Here, you don't just learn; you learn by doing. </p>
+                <h1 class="admission-title">History</h1>                
+                <p>Montreal Technical University is a public university, founded in 1821. </p>
+                <h1 class="admission-title">A tradition of Success</h1>                
+                <p>MTU is recognized around the world for the excellence of its teaching and research programs. Ernest Rutherford's Nobel Prize-winning research on the nature of radioactivity was conducted at MTU, part of a long tradition of innovation on our campuses that includes the invention of the artificial blood cell and Plexiglas. Today our professors are building the new field of epigenetics, developing alternative energy sources from crop plants and driving human achievement in every field imaginable. </p>
+                
+                <h1 class="admission-title">The Best and Brightest</h1>                
+                <p>In addition to a stellar faculty, MTU is known for attracting the brightest students from across Canada, the United States, and around the world. MTU students have the highest average entering grades in Canada, and our commitment to fostering the very best has helped our students win more national and international awards on average than their peers at any other Canadian university. The prestigious Rhodes Scholarship has gone to a nation-leading 105 MTU students. </p>
+                <br>
+                <p> MTU is sitiated in one of best city in North-America, Montreal. Due to various reasons you will love to stay and explore Montreal </p>
+                <h1 class="admission-title">Reasons why you'll love studying in Montreal</h1> 
+                <img src="{% static 'Images/mtl.JPG' %}" id="mtl" height="400" width="1200" margin:"0px auto">
+                <ul>
+                <li>
+                <h2>You don’t need to speak French</h2> </li>
+                    <p>Across the city, you’ll get by easily speaking English. And once you’re here, why not pick up some French? Living in Montreal is a great way to immerse yourself in a new language and culture.</p>
+                    <li><h2>There's stuff to do in every season</h2></li>
+                    <p>Summers are hot and winters are snowy, but the weather never slows us down. We love to get outside, whether that’s playing sports in winter, or hanging out on terrasses and picnicking in parks when the weather warms up.</p>
+                    <li><h2>It’s a safe, affordable place to live</h2></li>
+                    <p>We are a progressive city in one of the safest countries in the world. This is a friendly and welcoming place for all. And Montreal has some of the lowest rent prices in Canada – no wonder we’re a top student city!</p>
+                    <img src="{% static 'Images/mtl2.JPG' %}" id="mtl" height="350" width="1100" margin:"0px auto">
+                    <li><h2>It’s really easy to get around</h2></li>
+                    <p>You can bike across the city on spacious bike lanes, or take the metro for an even faster trip. Being a student makes these eco-friendly travel options even sweeter. We have great student rates for public transit and bike shares!</p>
+                    <li><h2>This city sparks innovation</h2></li>
+                    <p>Montreal is a global leader in aerospace, tech, artificial intelligence, pharmaceuticals, video game development and more. No matter what sector you're interested in, this is the perfect place to explore and thrive. </p>
+                    <li><h2>It's historic, diverse and multicultural </h2></li>
+                    <p>Montreal is in the traditional territory of the Anishinabeg and Haudenosaunee nations. It has been a meeting place for different Indigenous groups and settlers for centuries. You’ll find a rich history across the city, and hear Montrealers speaking all kinds of languages, from Inuktitut and Spanish to Creole and Chinese. </p>
+             </ul>
+        </div>
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

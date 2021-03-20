@@ -1,0 +1,173 @@
+body{ margin:0px;
+    padding:0px;
+}
+
+#body1{
+    background-color: #042B52;
+    width: 1525px;
+    height:150px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#body2{
+    background-color: white;
+    width: 1525px;
+    height:750px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#logo{
+    width: 125px;
+    height: 125px;
+    margin:10px 10px 10px 10px;
+    position: absolute;
+}
+
+#background{
+    width: 1525px;
+    height: 750px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#search{
+        width:200px;
+    height:20px;
+    margin-top:50px;
+    margin-left:1255px;
+    margin-bottom:20px;
+    position: absolute;
+        
+}
+.top{
+        left:0px;
+    
+    float: left;
+    margin-top: 93px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: white
+}
+.mainhead{
+    top:20px;
+    font-weight: bold;
+}
+
+#look{
+    padding: 5px;
+    height:20px;
+    position:absolute;
+    margin-left:10px;
+    margin-top:10px;
+    padding-top:2px;
+    padding-left: 5px;
+}
+#it{
+    padding-left: 250px;
+    padding-top: 10px;
+    float: left;
+    color: white;
+    font-size:150px;
+}
+#about{
+    width: 1525px;
+    height: 750px;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.admission p{
+    font-size: 20px;
+    margin-top: -40px;
+    line-height: 30px;
+    padding: 30px;
+    margin-bottom: 0px;
+    justify-content: center;
+}
+#undergraduate{
+     width: 900px;
+    height: 400px;
+    position: relative;
+    margin:0px 3%;
+    padding: 2px;
+    z-index: 1;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.icon{
+    margin-left: 60px;
+    align-items:center;
+}
+.admission-item1 p{
+    font-size: 20px;
+    margin-top: -40px;
+    line-height: 30px;
+    padding: 30px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+    }
+#graduate{
+     width: 900px;
+    height: 400px;
+    position: relative;
+    margin:0px 3%;
+    padding: 2px;
+    z-index: 1;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.admission-item2 p{
+    font-size: 20px;
+    margin-top: -40px;
+    line-height: 30px;
+    padding: 30px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    
+    }
+#professional{
+     width:000px;
+    position: relative;
+    margin:0px 3%;
+    padding: 2px;
+    z-index: 1;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.admission-item3 p{
+    font-size: 20px;
+    margin-top: -40px;
+    line-height: 30px;
+    padding: 30px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    
+    }
+.how p{
+    font-size: 20px;
+    margin-top: -40px;
+    line-height: 30px;
+    padding: 30px;
+    margin-bottom: 0px;
+    justify-content: center;
+    margin-left: 200px;
+}
+.steps p{
+    font-size: 20px;
+    margin-top: -40px;
+    line-height: 30px;
+    padding: 30px;
+    margin-bottom: -40px;
+    justify-content: center;
+    margin-left: px;
+}
+
+
+#body4{
+    width: 1050px;
+    margin: 0px auto;
+}

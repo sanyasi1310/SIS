@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+        <style>  
+         body{
+                background-image: url({% static 'img/p6.jpg' %});
+                background-repeat:no-repeat;
+                background-attachment: fixed;
+                background-size: cover;}
+                  
+       .accordion {
+        background-color: skyblue;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 80%;
+        border: 2px;
+        text-align: left;
+        outline: none;
+        font-size: 20px;
+        transition: 0.4s;
+                }
+    .img{
+    margin-top:20px;
+    position:relative;
+    width:600px;
+    height:400px;
+    align:left;
+    }
+    .img img{
+    max-width:100%;
+    
+    }
+            h1{
+            color: #042B52 ;
+        font-size:40px;
+                       
+                text-transform: none;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h2{
+                color: black;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+   
+
+.active, .accordion:hover {
+  background-color: pink; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+     .button {
+                background-color: #4CAF50; 
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 55px 1375px;
+                cursor: pointer;
+            }
+            .button1 {padding: 10px 24px;}
+            a:hover {
+                background-color: darkgrey;
+            }
+       </style>
+    </head>
+    <body>
+     
+    
+    
+    <!-- Top content -->
+    <center>
+    <div class="underTop">
+    <h1 ><b>Undergraduate Admissions</b></h1>
+    <br>
+        <img style='border:5px groove black; border-radius:5px;' src="{% static 'img/undergraduate.jpg' %}" id="undergraduate">
+        <p style="width:80%; text-align:left; font-size:20px;">MTU is committed to creating better opportunities for Indigenous students, building
+                 and
+                 improving respectful partnerships with Indigenous communities and encouraging 
+                 everyone
+                  to be part of a shared vision for the future as part of our response to 
+                 Canada's Truth and
+                  Reconciliation Commission. Learn in an amazing place with world-class
+                  facilities and
+                   instructors, unique programs and diverse perspectives create our
+                   extraordinary
+                   academic environment. Here, you'll learn by doing. Peer through
+                    microscopes, gaze at the 
+                    stars, dig into the past, and contemplate the future with
+                     hands-on experience.</p>
+                     </div>
+                     </center>
+                     <center>
+<!-- Accordion start -->
+<button class="accordion">Hands-on Research</button>
+<div class="panel">
+<div class="img">
+                     <img src="{% static 'img/1.jpg' %}" id="u1">
+                     <br>
+                     </div>
+  <p style="width:80%;text-align:left;margin-top:-70px;font-size:20px;">
+                     You could meet your mentor and learn from award-winning 
+                     professors while getting involved in research as early as your first year of study.
+                     With our advanced facilities, leading experts and mentors, and funding resources-it's 
+                     never been a better time to get involved in groundbreaking research. While our research spans
+                      multiple fields, we have key strengths in various areas that you should explore.</p>
+</div>
+
+<button class="accordion">Co-op and Careers</button>
+<div class="panel">
+<div class="img">
+                      <img src="{% static 'img/2.jpg' %}" id="u2">
+                     </div>
+  <p style="width:80%;margin-top:10px;
+        text-align:left;
+        font-size:20px;">By building work experience into our degrees, our graduates are some of the most employable in
+                      the world. All of our direct-entry have some form of co-op, practicum or internship.
+                     Get a leg up in the job market and test drive your potential career. We have co-ops, practicums,
+                      and work experience programs in every faculty that can give you relevant work experience and connect 
+                      you with employers in your field.</p>
+</div>
+
+<button class="accordion">+15 Million in Funding
+</button>
+<div class="panel">
+<div class="img">
+                      <img src="{% static 'img/3.jpeg' %}" id="u3">
+                     </div>
+  <p style="width:80%; margin-top:10px;
+        text-align:left;
+        font-size:20px;">Over $32 million in scholarships, awards, and financial support is available to undergraduates each year.
+                     You could be starting with scholarships you don't even have to apply for! You will be evaluated for these
+                      scholarships when you apply for admission. Your eligibility will be based on your high school admission
+                       average at the time of your admission offer. We'll assess you for a match to the following and many more.</p>
+</div>
+<button class="accordion">Presentations & Events
+</button>
+<div class="panel">
+<div class="img">
+                     <img src="{% static 'img/4.jpg' %}" id="u4">
+                     </div>
+  <p style="width:80%;margin-top:-190px;
+        text-align:left;
+        font-size:20px;">We host presentations and events for students year-round on a variety of topics like:Undergraduate experience, 
+                     How to submit an application and Applying for awards.
+                    With our advanced facilities, leading experts and mentors, and funding resources-it's 
+                     never been a better time to get involved in groundbreaking research. While our research spans
+                      multiple fields, we have key strengths in various areas that you should explore.</p>
+</div> 
+</center>
+ <script>
+
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+                    
+                     
+           
+    </body>
+    </html>

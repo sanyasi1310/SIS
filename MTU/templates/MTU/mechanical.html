@@ -1,0 +1,229 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mechanical Engineering</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'MTU/hstyle.css' %}">
+        <style type="text/css"> 
+            body{
+                background-image: url({% static 'Images/mechbg' %});
+                background-repeat:no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                font-family:'Roboto',sans-serif;
+                color: #3e3e3e;
+                padding: 50px 0;
+            }
+            h1{
+                color: black;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h2{
+                color: black;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+             h3{
+                color: white;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h4{
+                color: #3696dc;
+                text-transform: none;
+                text-align:left;
+                letter-spacing: 2px;
+            }
+            h5{
+                color: black;
+                text-transform: none;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+             h6{
+                color: black;
+                text-transform: none;
+                text-align:left;
+                letter-spacing: 2px;
+            }
+            p{
+                font-size:16px;
+                line-height: 24px;
+            }
+            .container{
+                max-width:1270px;
+                width:100%;
+                margin: 0 auto;
+                display: flex;
+            }
+            /* for three verticle sections on page */
+            .column{
+                margin: 0 15px 25px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0,0, 0.24);
+                background: #fff;
+                border-radius: 10px;
+                flex-basis: 33%;
+            }
+            .card{
+                padding:15px 25px;
+            }
+            img{
+                max-width:100%;
+            }
+            /* for button properties */
+             .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 55px 1375px;
+                cursor: pointer;
+            }
+            .button1 {padding: 10px 24px;}
+            a:hover {
+                background-color: darkgrey;
+            }
+            
+        </style>
+    </head>
+    <body>
+     
+    <h1><b>Mechanical Engineering</b></h1>
+    <br>
+    <center>
+        <img style='border:5px solid black' src="{% static 'Images/mechanical.jpg'%}" height="400px" width="650px">
+        <div class="w3-container">
+            <div class="w3-light-grey w3-section" style="width:57.5%">
+            
+                <!-- /* allumni accordion */ -->
+            <button onclick="myFunction('Demo3')" class="w3-button w3-block"> Meet Haonan Cao, MEng candicate in Mechanical & Materials Engineering</button>
+            <div id="Demo3" class="w3-hide w3-container">
+            <h4>Where is “home” for you?</h4>
+            <p>I’m from China. I was born there and grew up there, and lived there for more than 20 years.</p>
+            <h4>What is it about your grad program that enables you to thrive and be successful?</h4>
+            <p>I think the most important thing is that studying here broadens my horizons not only in my major area of study, but also in other engineering fields and non-engineering fields. I’ve learned about project management, learned about other software, how to communicate with people from other countries, and how to work better together. The learning and living experiences abroad here gives me a better understanding of the world outside my home country.
+            </p>
+            <h4>What’s the best advice you could give to someone considering applying to your graduate program?</h4>
+            <p>For international students, try your best to get a high GPA, participate in one or two clubs, and learn English as early as possible.</p>
+            <h4>What are you most passionate about?</h4>
+            <p>I’m most passionate about travel, especially backpacking. I like to experience different cultures around the world. I’ve traveled to several countries in Asia, Europe, and North America. My next destination is South America.</p>
+            </div>
+            </div>              
+        </div>
+        <script>
+            function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            } else { 
+            x.className = x.className.replace(" w3-show", "");
+            }
+            }
+        </script>
+    </center>
+        <!-- /* course information */ -->
+    <div id="bodyI">
+            <h6><b>Our MEng is a course-based degree that is structured to assist qualified engineers in the advancement of their professional careers and to provide students with the skills necessary to address key technological challenges. We offer seven technical streams within our MEng program to allow you to receive specialized training in the specific areas of Mechanical Engineering that interest you.</b></h6>
+    </div>
+        <!-- /* page is splitted into three sections from here for program information */ -->
+    <div class="container">
+        <!-- /* Section 1 */ -->
+        <div class="column">
+           <div class="card">
+                <h2>Program Information</h2>
+                <h4><b>Program Length</b></h4>
+                <h5>3 Terms (1 year)</h5>
+                <h4><b>Program Design</b></h4>
+                <ul>
+                    <li>Full-time study</li>
+                    <li>Part-time study</li>
+                    <li>Project-based</li>
+                    <li>Course-based</li>
+                </ul>
+                <h4><b>Application Deadline</b></h4> 
+                <h5><b>For Domestic Students</b></h5>
+                <ul>
+                    <li>Fall Semester : 30th June</li>
+                    <li>Winter Semester : 30th November </li>
+                    <li>Summer Semester : 30th March </li>
+                </ul>     
+                <h5><b>For International Students</b></h5>
+                <ul>
+                    <li>Fall Semester : 15 May</li>
+                    <li>Winter Semester : 15th October </li>
+                   <li>Summer Semester : 15th February </li>
+                </ul>   
+               <h4><b>Fields of Research</b></h4>
+               <ul>
+                <li>Automation Technologies and Systems</li>
+                <li>Composite Materials</li>
+                <li>Engineering in Medicine</li>
+                <li>Heating, Ventilation and Air condiioning</li>
+                <li>Materials and Solid Mechanics</li>
+                <li>Mechanical Engineering</li>
+                <li>Thermofluids</li>
+               </ul>
+          </div>            
+        </div>
+        
+        <!-- /* Section 2 */ -->
+        <div class="column">
+           <div class="card">
+                <h2>Requirements</h2>
+                <h4><b>Program Requirements</b></h4> 
+                <ul>
+                    <li>Four-year Bachelor of Engineering degree (or equivalent) from an accredited university; Students with a similar degree from another discipline may be admitted on a case by case basis, with approval from the Associate Chair (Graduate Professional).</li>
+                    <li>Minimum 70% (North American equivalent) from the last 2 years of full-time study, or the last 20 courses.</li>
+                    
+                </ul> 
+               <h4><b>Additional Requirements</b></h4> 
+                <ul>
+                    <li>Other factors such as publication record and/or industrial experience may also be beneficial.</li> 
+                </ul> 
+                    <h4><b>English Language Proficiency</b></h4>
+                    <h5><b>Applicants whose first language is not English must furnish the evidence of their proficiency in the use of the english language</b></h5>
+                    
+                <ul>
+                    <li>The Test of English as a Foreign Language (TOEFL). The minimum acceptable score is 86, with no individual score below 20 for the internet based version; 213 for the standard electronic version; or 550 for the paper and pencil version, although some programs require a higher minimum score. </li>
+                    <li>The International English Language Testing Service (IELTS) of the British Council. The minimum acceptable score is 6.5 out of 9, with no minimum score below 6.0. The IELTS is offered in 6 test centres in the US and 3 in Canada.</li>
+                    
+                </ul> 
+               
+            </div>            
+        </div>
+        
+        <!-- /* Section 3 */ -->
+        <div class="column">
+           <div class="card">
+                <h2>Inquiries</h2>
+                <h4><b>Application Inquiries</b></h4>
+                <p>Inquiries related to the online application can be directed to SGPS at:</p>
+                <p><b>Email : gradapps@mtu.ca</b></p>
+                <p><b>Phone : 438-850-2341</b></p>
+                <p>Fax : 438-661-3730</p>
+                <h4><b>Program Contact</b></h4>
+                <h5><b>Joanna Blom</b></h5>
+               <center>
+                    <img src="{% static 'Images/mechcontact.PNG' %}" height="150px" width="165px"> 
+               <p>(jblom@mtu.ca)</p>
+               </center>
+               <p>Graduate Program Coordinator</p>
+               <p>Department of Mechanical & Materials Engineering</p>
+               <p>Montreal Technical University</p>
+               <p><b>438-661-2111 ext. 83568</b></p>
+               <p>Fax : 438-661-3510</p>
+            </div>            
+        </div>
+    </div>
+       
+    </body>

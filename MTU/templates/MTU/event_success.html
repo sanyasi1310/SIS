@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>option</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/modern-business.css' %}" rel="stylesheet">
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css"
+        href="{% static 'MTU/hstyle.css' %}">  
+        <style type="text/css"> 
+               body{
+                background-image:  url({% static 'Images/bglogo.PNG' %});
+                background-repeat:no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                font-family:'Roboto',sans-serif;
+                color: white;
+                padding: 50px 0;
+            }
+            h1{
+                font-size:100px;
+                text-shadow: 5px 5px white;
+                font-family:monospace;
+                color: darkblue;
+                border-color: black;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h2{
+                color: #FB036F;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+             h3{
+                
+                color: black;
+                 border-color: green;
+                text-transform: none;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h4{
+                color: darkblue;
+                text-transform: none;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h5{
+                color: white;
+                text-transform: none;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+             h6{
+                color: white;
+                text-transform: none;
+                text-align:left;
+                letter-spacing: 2px;
+            }
+            p{
+                font-size:16px;
+                line-height: 24px;
+            }
+            .container1{
+                max-width:1270px;
+                width:100%;
+                margin: 0 auto;
+                display: flex;
+            }
+            .column{
+                margin: 0 15px 25px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0,0, 0.24);
+                background: #fff;
+                border-radius: 10px;
+                flex-basis: 33%;
+            }
+            .card{
+                padding:15px 25px;
+            }
+            img{
+                max-width:100%;
+            }
+            .button{
+                  background-color: #4CAF50; /* Green */
+                  border: none;
+                  color: white;
+                  padding: 15px 48px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 4px 0px;
+                margin-left: 660px;
+                  cursor: pointer;
+                  -webkit-transition-duration: 0.4s; /* Safari */
+                  transition-duration: 0.4s;
+                }
+
+                .button1 {
+                  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                }
+
+        </style>
+    </head>
+    <body>
+       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <!---- <img src="Images/logo2.PNG" height="60" width="60"> ---->
+                <a class="navbar-brand" href="{% url 'masterpage' %}">HOME</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{% url 'faq' %}">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        
+    <br>
+    <br>
+        <h1><b>Thank you</b></h1>
+        <br>
+        <br>
+        <h3><b>for registering in the Event. </b></h3>
+        <h3><b>We will send you funther updates regarding our Event.</b></h3>
+        <br> 
+        <h3><b>For further questions, please contact us</b></h3>
+        <h4><b>mtuspace7@gmail.com</b></h4>
+        <br>
+        
+    </body>
+</html>

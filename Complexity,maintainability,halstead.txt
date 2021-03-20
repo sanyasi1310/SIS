@@ -1,0 +1,45 @@
+#----------CYCLOMATIC COMPLEXITY--------------#
+Cyclomatic complexity (or conditional complexity) is a software metric 
+(measurement). It was developed by Thomas J. McCabe, Sr. in 1976 and is 
+used to indicate the complexity of a program. It directly measures the 
+number of linearly independent paths through a program's source code.
+
+Keys
+$ F :function 
+$ M :method
+$ C:class
+$ S: Line the fxn starts on
+$ A-F : Rating(A least complex,F Most Complex)
+$ (#): Complexity of Code
+
+
+#----------MAINTAINABILITY INDEX-------------#
+Maintainability Index is a software metric which measures how maintainable 
+(easy to support and change) the source code is. The maintainability index 
+is calculated as a factored formula consisting of Lines Of Code, Cyclomatic 
+Complexity and Halstead volume. 
+
+
+How easy or hard it is to maintain the code
+
+$ Easy > 75
+$ Hard <25 (below 25)
+$ F=Hardest
+$ A=Easiest
+
+#----------HALSTEAD VOLUME------------------#
+Halstead complexity measures are software metrics introduced by Maurice 
+Howard Halstead in 1977. These metrics are computed statically, without 
+program execution.
+
+$ Measure complexity using the size of program codebase
+$ Identify measurable properties of software and their relations
+$ Operands(Variables,values)
+$ Operators(built in keywords)
+$ Length(L) = operators + operands • Vocab(h) = uniqloperators + operands)
+$ Volumn(V) =1+h
+$ Difficulty(D)
+$ Effort =volumn X difficulty
+$ Bugs = Volumn/3000
+$ Time = effort/18
+

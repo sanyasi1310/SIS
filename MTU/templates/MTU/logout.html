@@ -1,0 +1,12 @@
+<!-- Include base file from main app MTU -->
+{% extends "MTU/base1.html" %}
+<!-- #Logout Code (Define classes and link to Login) -->
+{% block content %}
+<h2>You have been logged out</h2>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Log In Again</a>
+        </small>
+    </div>
+
+{% endblock content %}

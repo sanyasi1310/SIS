@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MTU-Space</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'MTU/hstyle.css' %}">
+        <style>
+                /*properties for body part */
+        body{
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .button {
+                background-color: white; /* Green */
+                border: none;
+                color: black;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                border-radius: 30px;
+                font-size: 16px;
+                margin: -60px 1275px;
+                cursor: pointer;
+            }
+
+.student{
+    font-size: 16px;
+                margin: -60px 1400px;
+}
+            .button1 {padding: 10px 24px;}
+            a:hover {
+                background-color: darkgrey;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="body1">
+            <img src="{% static 'Images/logo2.jpg' %}" id="logo">
+            <br>
+            <h1 style="color: white ; font-size:60px" align="center">Student Services</h1>
+                    <!-- /* connect to Home button */            -->
+                    <a href="{% url 'logout' %}" class="button button1">Logout</a>
+        <div class="student">
+            
+                <h4 class ="us" style="color: white;"><b>Hello <br>{{request.user}}</b></h4>
+            
+        </div>    
+        </div>
+                    <!-- /* Student services */ -->
+        <div class="container" style="margin:0">
+            <div class="row">
+            <div class="col-sm-3">
+                <h3>MTU Space</h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="{% url 'student_info' %}">Student Information</a></li>
+                    <li><a href="{% url 'Enrollment' %}">Enrollment</a></li>
+                    <li><a href="{% url 'displaycourse' %}">Course</a></li>
+                    <li><a href="{% url 'finance' %}">Finance</a></li>
+                    <li><a href="{% url 'event' %}">Events</a></li>
+                    <li><a href="{% url 'HelpDesk' %}">Help Desk</a></li>
+                    <li><a href="{% url 'alumni' %}">Alumni</a></li>
+                </ul>
+                <hr class="hidden-sm hidden-md hidden-lg">
+            </div>
+            <div class="col-sm-8">
+                    <!-- /* main content of the page */ -->
+                <h2>Canada's best student Experience</h2>
+                <h5>Based on QS World Ranking, 1st Novermber, 2020</h5>
+                <div>
+                    <img src="{% static 'Images/studentEXP.JPG' %}" height="210px" width="900px">
+                </div>
+                    <p>MTU has been ranked among the top 25 universities in the world by the prestigious QS World University Rankings. MTU moved up four spots to 25th globally in the annual ranking of the world’s top 1,000 universities by Quacquarelli Symonds, a London, U.K.-based analytics firm. It also maintained its position as Canada’s top-ranked school.
+                    <p>Among public universities, MTU ranked second in North America and 15th globally.</p>
+                <div class="divider"> 
+                    <div class="rowp">
+                        <div class="columnp">
+                            <p>MTU continues to be the highest-ranked Canadian university and ranked among the top 25 universities globally in the five most closely watched international rankings</p>
+                        </div>
+                        <div class="columnp">
+                            <p>According to QS World University Rankings, MTU comes on 25th position golabally. </p>
+                        </div>
+                        <div class="columnp">
+                            <p>According to Times Higher Education World University Rankings, MTU secured 18th position in top educational institutes.</p>
+                        </div>                        
+                    </div>  
+                    <div class="rowp">
+                        <div class="columnp">
+                            <p>MTU secured 23rd position in Shanghai Ranking Consultancy’s Academic Ranking of World Universities</p>
+                        </div>
+                        <div class="columnp">
+                            <p>According to National Taiwan University Ranking, MTU is 3rd best University</p>
+                        </div>
+                        <div class="columnp">
+                            <p>MTU stays at 18 position according to U.S. News & World Report</p>
+                        </div>                        
+                    </div>  
+                </div>      
+                <br>
+                    <h2>Fight against Covid-19</h2>
+                    <h5>What University is doing to deal with covid-19, Oct 29, 2020</h5>
+                        <div><img src="{% static 'Images/covid.jpg' %}" id="covid" height="300px"; width="550px"; margin: 0px auto;;></div>
+                            <h4 style="color: #ff4350">Around the world, MTU students, staff, faculty and alumni are joining forces to face the unprecedented challenges of COVID-19.</p>  
+                </div>
+            </div>
+        </div>
+</body>
+</html>

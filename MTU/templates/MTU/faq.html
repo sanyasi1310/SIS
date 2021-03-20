@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .accordion {
+        background-color: #F6D8CE;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 60%;
+        border: 1px;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        }   
+    h1{
+        color: #8258FA;
+        text-transform: none;
+        text-align:center;
+        letter-spacing: 2px;
+        }
+    h2{
+        color: black;
+        text-transform: uppercase;
+        text-align:center;
+        letter-spacing: 2px;
+        }
+    p{
+        width:60%;
+        text-align:left;
+    }
+
+    .active .accordion:hover {
+        background-color: darkgrey; 
+     }
+
+    .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+        }
+     .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 55px 1375px;
+        cursor: pointer;
+        }
+        .button1 {padding: 10px 24px;}
+        a:hover {
+        background-color: darkgrey;
+        }
+</style>
+</head>
+<body>    
+<h1>Frequently Asked Questions</h1>
+    <h2>FAQ - Admissions </h2>    
+<center>
+<button class="accordion">I already submitted my application. Can I make changes to it?</button>
+<div class="panel">
+  <p>Once you have submitted your application to MTU, you are no longer able to make changes online. If you made a mistake (i.e. name is misspelled, self-reporting grades mistakes, adding or removing extenuating circumstance, etc), you must submit a webform request.</p>
+</div>
+<button class="accordion">I want to change my program choice. Is this possible?</button>
+<div class="panel">
+  <p>Once you have submitted your application, it's too late to change your program choice. If you would like to make a program change or add a second choice, you will have to submit a new application before the application deadline.</p>
+</div>
+<button class="accordion">I need to add or change my OUAC number. How do I do that?</button>
+<div class="panel">
+  <p>If you didn't enter your OUAC number, you should submit it through online portal (Applicant Menu->Submit OUAC Reference Number). If the number you entered is incorrect, you can send the correct number through our webform.</p>
+</div>
+    <h2>FAQ - Documents</h2>    
+<button class="accordion">I am a graduate applicant and I would like more information regarding admission and uploading my documents.</button>
+<div class="panel">
+  <p>Graduate applicants should consult the Future Graduate Students web site for detailed information regarding admissions deadlines and how to use our new document upload feature via online portal.</p>
+</div>    
+<button class="accordion">I am a CEGEP applicant. How do I upload my CEGEP transcript?</button>
+<div class="panel">
+  <p>CEGEP applicants have a checklist requirement for a CEGEP Electronic Transcript. MTU will obtain your transcript by submitted a correct Permanent Code.</p>
+</div>    
+<button class="accordion">I am a U.S. high school applicant. How do I self-report my grades?</button>
+<div class="panel">
+  <p>New for Fall 2021, if you are completing a US high school diploma in the U.S.A., you will be required to self-report your grades. Please see mtu.ca/undergraduate-admissions/apply/self-reporting-usa for more information.</p>
+</div> 
+    <button class="accordion">My transcript is in a language other than English or French. Do I need to provide a translation?</button>
+<div class="panel">
+  <p>Yes. Please refer to Guidelines for uploading unofficial transcripts.</p>
+</div> 
+    
+    <h2>FAQ - Winter 2021 and Fall 2021 entry</h2>
+    
+<button class="accordion">I am an international applicant who cannot take physical English proficiency tests as centres are closed. What are my options?</button>
+<div class="panel">
+  <p>In response to COVID-19, both the IELTS and TOEFL tests have been made available online for students who are unable to take the tests at a test center. Please see the information on their respective websites</p>
+</div>    
+<button class="accordion">What if my university cannot provide official transcripts?</button>
+<div class="panel">
+  <p>Electronic copies of official transcripts and proofs of degree can be sent to officialschooldocs@mtu.ca.</p>
+</div>    
+<button class="accordion">When is the acceptance deadline for my offer of admission?</button>
+<div class="panel">
+  <p>Acceptance deadlines vary by department for graduate studies. We recommend that you contact the graduate program director in your department. If the deadline has passed, you can request an extension. We are asking departments to be flexible given the circumstances.</p>
+</div> 
+    <button class="accordion">How will classes be held in the Winter 2021 semester?</button>
+<div class="panel">
+  <p>Winter 2021 courses will be delivered primarily through remote platforms, with enhanced in-person teaching activities in accordance with public health protocols. </p>
+</div> 
+</center>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+<a href="{% url 'Home' %}" class="button button1">HOME</a>
+</body>
+</html>

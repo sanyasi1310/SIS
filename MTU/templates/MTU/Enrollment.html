@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MTU-Enrollment</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'MTU/hstyle.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <style>
+        body{
+            background-image: url('static/Images/pf.PNG');
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+           }
+        .accordion {
+          background-color: #eee;
+          color: #444;
+          cursor: auto;
+          padding: 25px;
+          width: 120%;
+          border: none;
+          text-align: match-parent;
+          outline: inherit;
+          font-size: 15px;
+          transition: 0.4s;
+          font-style: normal;
+          font-weight: 800;
+        }
+        .active .accordion:hover {
+          background-color: #F9E79F ;
+        }
+        .panel {
+          padding: 0 18px;
+          display: none;
+          background-color: white;
+          overflow: hidden;
+        }
+        .button {
+                background-color: white; 
+                border: none;
+                color: black;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                border-radius: 30px;
+                font-size: 16px;
+                margin: -60px 1375px;
+                cursor: pointer;
+            }      
+             .button1 {padding: 10px 24px;}
+            a:hover {
+                background-color: darkgrey;
+            }
+    </style>
+</head>
+<body>
+<div id="body1">
+    <img src="{% static 'Images/logo2.jpg' %}" id="logo">
+    <br>
+    <h1 style="color: white ; font-size:60px" align="center">Enrollment</h1>
+    <!-------------------------Home button----------------------------->
+<a href="{% url 'masterpage' %}" class="button button1">Home</a>    
+</div>
+<div class="container" style="margin:0">
+    <div class="row">
+        <div class="col-sm-3">
+            <h3>MTU Space</h3>
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href="{% url 'student_info' %}">Student Information</a></li>
+              <li class="active"><a href="{% url 'Enrollment' %}">Enrollment</a></li>
+              <li><a href="{% url 'displaycourse' %}">Course</a></li>
+              <li><a href="{% url 'finance' %}">Finance</a></li>
+              <li><a href="{% url 'event' %}">Events</a></li>
+              <li><a href="{% url 'HelpDesk' %}">Help Desk</a></li>
+              <li><a href="{% url 'alumni' %}">Alumni</a></li>
+              
+            </ul>
+            <hr class="hidden-sm hidden-md hidden-lg">
+        </div>
+        <div class="col-sm-8">
+            <h2 style="text-align:justify">Winter-21</h2>
+            <h1>{{p}}</h1>
+            <!-------------------------------Sub 1------------------------------------>
+            {% for k in queryset %}
+            <button class="accordion">{{ k.name }}</button>
+            <div class="panel">
+                <br>
+                <p>Code: {{ k.code }}</p>
+                <p>Schedule: {{ k.day }}</p>
+                <p>Time : {{ k.time }}</p>
+                <p>Credit : {{ k.credits }}</p>
+                <p>Cost : $ {{ k.cost }}</p>
+
+                <form method="post" action="/savecourse/">
+                    {% csrf_token %}
+                    <label for="courseName"></label>
+                    <input name="courseName" id="courseName" value="{{k.name}}" type="hidden">
+                    <label for="studentName"></label>
+                    <input name="studentName" id="studentName" value="{{ request.user}}" type="hidden">
+                    <label for="grade"></label>
+                    <input name="grade" id="grade" value="NA" type="hidden">
+                    <label for="fees"></label>
+                    <input name="fees" id="fees" value="{{k.cost}}" type="hidden">
+                    <button class="btnADD" type="submit" value="Submit">ADD</button>
+                </form>
+            </div>
+            <br>
+            <br>
+            {% endfor %}
+            <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+            </script>
+        </div>
+    </div>
+</div>
+</body>
+</html>

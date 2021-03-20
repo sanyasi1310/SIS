@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="utf-8">
+      <title>Undergraduate</title>
+      <link rel="stylesheet" type="text/css"
+      href="{% static 'MTU/hstyleM.css' %}">
+<!-- for accordion -->
+<style>
+    .accordion {
+        background-color: skyblue;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 80%;
+        border: 2px;
+        text-align: left;
+        outline: none;
+        font-size: 20px;
+        transition: 0.4s;
+                }
+    
+            h1{
+            color: #042B52 ;
+        font-size:40px;
+                       
+                text-transform: none;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h2{
+                color: black;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+    p{
+        width:80%;
+        text-align:left;
+        font-size:20px;
+    }
+
+.active, .accordion:hover {
+  background-color: pink; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+     .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 55px 1375px;
+                cursor: pointer;
+            }
+            .button1 {padding: 10px 24px;}
+            a:hover {
+                background-color: darkgrey;
+            }
+</style>
+</head>
+<body>
+
+    <center>
+<h1>Professional Skills</h1>
+
+     <br>
+        <img style='border:5px groove black; border-radius:5px;' src="{% static 'img/graduate.jpg' %}" id="graduate">
+        <p style="font-size:20px;
+        margin-left:20px;
+        width: 1100px;
+        margin-right:20px;
+        margin-top: 20px;">Building on our strengths in environmental studies, earth
+                   and ocean sciences, and sustainable approaches to business
+                   and law, our programs make a difference to people, places
+                   and the planet. Newer graduate offerings reflect areas of
+                   emerging interest in neuroscience and the performing
+                   arts, while our deep commitment to professional programs
+                   launches and advances fulfilling careers. Your supervisor is a faculty member
+                    who will mentor you while you study at MTUSPACE. They will guide your research and
+                     the resulting thesis, project or dissertation. This relationship is one of the
+                      most important resources at your disposal. Its important to get this right.</p>
+                     </center>
+     
+<center>
+<!-- Accordion start -->
+<button class="accordion">Professional Development Requirement</button>
+<div class="panel">
+  <p>An exciting initiative to help you recognize your talents, pursue your interests, learn professional skills and make the connections that will help you excel in your chosen field.</p>
+</div>
+
+<button class="accordion">Academic Integrity and Ethics Training Requirement</button>
+<div class="panel">
+  <p>Complete your academic integrity and ethics training with eight hours of structured academic activity.</p>
+</div>
+
+<button class="accordion">Events and Training
+</button>
+<div class="panel">
+  <p>Attend a professional development conference, workshop or economic outlook presentation. Or challenge your communication skills with the Three Minute Thesis competition.</p>
+</div>
+<button class="accordion">Graduate Student Internship Program
+</button>
+<div class="panel">
+  <p>Secure a paid internship designed for graduate students. Made possible by a Government of Quebec grant.</p>
+</div>    
+<button class="accordion">Career Mentoring Program for Graduate Students
+</button>
+<div class="panel">
+  <p>Find academic and non-academic mentors to provide you with advice, support and strategies for your future.</p>
+</div>    
+<button class="accordion">Graduate Teaching and Learning Program
+</button>
+<div class="panel">
+  <p> Deepen your understanding of how people learn and hone your teaching skills while getting an edge in the academic 
+  market and preparing for non-academic leadership roles</p>
+</div> 
+    
+</center>
+<!-- Logic for accordion -->
+<script>
+
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/modern-business.css' %}" rel="stylesheet">
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'MTU/hstyle.css' %}">       
+    <style>
+    /* <!-----------------for font size and style---------------------->         */
+            h1{
+                color: black;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h2{
+                color: black;
+                text-transform: uppercase;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h3{
+                color: white;
+                text-transform: none;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h4{
+                color: #3696dc;
+                text-transform: none;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            h5{
+                color: black;
+                text-transform: none;
+                text-align:center;
+                letter-spacing: 2px;
+            }
+            p{
+                font-size:16px;
+                line-height: 24px;
+            }  
+        .box{
+            width: 500px;
+            height: 200px;
+            padding: 20px;
+            margin: 100px auto;
+            box-shadow: 0px 0px 10px 2px grey;
+            border: 10px solid red;
+            background-image: url('static/Images/p6.jpg')
+            /* background-size: cover; */
+        }
+        .container1{
+                max-width:1270px;
+                width:100%;
+                margin: 0 auto;
+                display: flex;
+            }
+            .column{
+                margin: 0 15px 25px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0,0, 0.24);
+                background: #fff;
+                border-radius: 10px;
+                flex-basis: 33%;
+            }
+            .card{
+                padding:15px 25px;
+            }
+            img{
+                max-width:100%;
+            }
+        </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="{% static 'Images/logo2.jpg' %}" height="60" width="65">
+                <a class="navbar-brand" href="{% url 'Home' %}'">MTU</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admission <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{% url 'undergraduate' %}">Undergraduate</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'graduate' %}">Graduate</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'professional' %}">Professional Education</a>
+                            </li>
+                            
+                        </ul>
+                    </li> 
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Departments <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{% url 'mechanical' %}">Mechanical Engineering</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'computer' %}">Computer Engineering</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'electronics' %}">Electrical & Computer Engineering</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'chemical' %}">Chemical Engineering</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'civil' %}">Civil Engineering</a>
+                            </li>
+                        </ul>
+                    </li> 
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{% url 'login' %}">Login</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'register' %}">Register</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'faq' %}">FAQ</a>
+                            </li>                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{% url 'campus' %}">Campus Life</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'Contact' %}">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!---------------------------- Header Carousel------------------------------>
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+        <!-------------------- carousel slides ------------------------------>
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('static/Images/HOME0.PNG');"></div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('static/Images/about.jpg');"></div>
+                <div class="carousel-caption">
+                    <h3><b>MTU - NORTH CAMPUS</b></h3>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('static/Images/home3.PNG');"></div>
+                <div class="carousel-caption">
+                    <h3><b>MTU - LAKESHORE CAMPUS</b></h3>
+                </div>
+            </div>
+             <div class="item">
+                <div class="fill" style="background-image:url('static/Images/home2.jpeg');"></div>
+                <div class="carousel-caption">
+                    <h3><b>MTU - ORANGEVILLE CAMPUS</b></h3>
+                </div>
+            </div>            
+        </div>
+        <!----------------------------- Controls ------------------------------------>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+    <!---------------------------------- Page Content ------------------------------->
+    <!------------------------------------researches--------------------------------->
+     <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">
+                    A sustainable world Made by research and action.
+                </h2>
+            </div>   
+    <br>
+       <div class="container1">
+        <div class="column">
+           <div class="card">              
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Protecting Canada’s rivers and lakes</h4>
+                        <img src="{% static 'Images/research1.PNG' %}" height="305px" width="330px">
+                    </div>
+                    <div class="panel-body">
+                        <p>A love of canoeing and a passion for science guide grad student’s journey</p>
+                        <p>Canada’s vast northern landscapes are laced with rivers, streams and lakes, sustaining</p> </div>
+                </div>          
+          </div>            
+        </div>
+        <div class="column">
+           <div class="card">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Research for the community, by the community</h4>
+                        <img src="{% static 'Images/research2.PNG' %}" height="317px" width="330px">
+                    </div>
+                    <div class="panel-body">
+                        <p>Christine Ha’s climate change research on food systems in Northern Quebec is led by the area’s youth</p>
+                      <br>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div class="column">
+           <div class="card">
+                 <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>A smart approach to see what goes into waste bins</h4>
+                        <center> 
+                        <img src="{% static 'Images/research3.PNG' %}" height="312px" width="310px">
+                        </center>
+                    </div>
+                    <div class="panel-body">
+                        <p>The Recycling Pioneers want to improve waste habits at MTU and are poised to start testing their smart waste bin platform in the Trottier building</p>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+    </div>
+        <!--------------------------- For News ----------------------------------->
+<div class="row products">
+
+            <div class="col-lg-12">
+                <h2 class="page-header">News</h2>
+            </div>
+            <div class="divider"> 
+                    <div class="rowp">
+                        <div class="columnp">
+                            <h4>Space Exploration / MTU students design food for future trip to Mars</h4>
+                            <img src="{% static 'Images/news1.PNG' %}" height="200px" width="220px" alt="">
+                            <p>A synthetic biology project works with resilient yeast strains that will behave more predictably in the space.</p>
+                        </div>
+                        <div class="columnp">
+                            <h4><b>Class of 2020</b></h4>
+                            <img src="{% static 'Images/news2.PNG' %}" height="200px" width="260px"> 
+                            <br>
+                            <br>
+                            <p>MTU helped this new grad 'DREAM BIGGER' and advance her startup ambitions. </p>
+                        </div>
+                        <div class="columnp">
+                            <h4><b>Student Life / 4 ways</b></h4>
+                            <img src="{% static 'Images/news3.PNG' %}" height="200px" width="220px" alt="">
+                            <br>
+                            <br>
+                            <p>MTU's class of 2020 can celebrate their special moments together - in real time.</p>
+                        </div>                        
+                    </div>  
+                    <div class="rowp">
+                        <div class="columnp">
+                             <h3><b>Take Pride</b></h3>
+                            <img src="{% static 'Images/news4.PNG' %}" height="200px" width="220px" alt="">
+                            <br>
+                            <br>
+                            <p>MTU scholar receives major universities art association of Canada award </p>
+                        </div>
+                        <div class="columnp">
+                            <h4><b>'Huge Adventure' </b></h4>
+                            <img src="{% static 'Images/news5.PNG' %}" height="200px" width="220px" alt="">
+                            <br>
+                            <br>
+                            <p>Huge adventures are here :  </p>
+                            <p>7 grads offer advice to the next generation.</p>
+                        </div>
+                        <div class="columnp">
+                            <h4><b>Detection </b></h4>
+                            <img src="{% static 'Images/news6.PNG' %}" height="200px" width="220px" alt="">
+                            <br>
+                            <br>
+                            <p>Detection of a short, intense radio burst in Milky Way could help resolve origins of mysterious phenomenon News</p>
+                        </div>                        
+                    </div>  
+                </div>
+             <!----------------------------- Weather updates section ------------------------------------>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">MTU in Winter | Weather Updates</h2>
+            </div>
+            <div class="row"> 
+                    <div class="column">
+                        <img src="{% static 'Images/winter1.PNG' %}" style="width:33%">
+                        <img src="{% static 'Images/winter2.PNG' %}" style="width:33%">
+                        <img src="{% static 'Images/winter3.PNG' %}" style="width:33%">
+                        
+                    </div>
+    
+                    <div class="column">
+                        <img src="{% static 'Images/winter4.PNG' %}" style="width:33%">
+                        <img src="{% static 'Images/winter5.PNG' %}" style="width:33%">
+                        <img src="{% static 'Images/14.jpg' %}" style="width:33%">
+                        
+                    </div>  
+                    
+                </div>
+        </div>
+        <br>
+    </div>
+     <!--------------------------------------- jQuery -------------------------------------------------------->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!------------------------------to Activate the Carousel & change the interval timing ----------------------------------------->
+    <script>
+    $('.carousel').carousel({
+        interval: 2000 
+    })
+    </script>
+</body>
+</html>
